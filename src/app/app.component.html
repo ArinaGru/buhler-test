@@ -1,0 +1,23 @@
+<header class="header container">
+  <a [routerLink]="['/']"
+    ><img src="../../assets/Logo_Bühler_AG.svg.png" alt="logo" width="200"
+  /></a>
+  <div>
+    <p>
+      <i class="material-icons">schedule</i>{{ date | date: "dd.MM.y HH:mm" }}
+    </p>
+    <p><i class="material-icons">account_circle</i>Operator</p>
+  </div>
+</header>
+<app-machines-header-holder class="container">
+  <app-machine *ngFor="let machine of machines$ | async" [machine]="machine">
+  </app-machine>
+</app-machines-header-holder>
+<app-machines-main-holder>
+  <app-machine
+    *ngFor="let machine of machines$ | async"
+    [machine]="machine"
+    [showIcon]="true"
+  >
+  </app-machine>
+</app-machines-main-holder>

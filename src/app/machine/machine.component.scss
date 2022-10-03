@@ -1,0 +1,34 @@
+div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.state-icon {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  font-size: 22px !important;
+}
+
+.running .state-icon {
+  color: #7ec200;
+}
+
+.alarm {
+  background-color: #ff3333;
+  color: white;
+}
+
+.warning {
+  background-color: #ffac1c;
+  color: white;
+}
+
+.my-icon {
+  font-size: 60px !important;
+}

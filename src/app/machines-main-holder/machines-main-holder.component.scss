@@ -1,0 +1,27 @@
+:host ::ng-deep app-machine {
+  background-color: #e5e5e5;
+  z-index: 2;
+  width: 115px;
+  height: 135px;
+  font-weight: 700;
+  & p {
+    padding-top: 15px;
+  }
+}
+:host {
+  display: flex;
+  justify-content: space-between;
+
+  position: relative;
+
+  margin: 80px 50px 0 50px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #7ec200;
+    top: 50%;
+  }
+}

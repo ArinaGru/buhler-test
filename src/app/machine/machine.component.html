@@ -1,0 +1,11 @@
+<div
+  [ngClass]="{
+    running: machine.state === 'Running',
+    warning: machine.state === 'Warning',
+    alarm: machine.state === 'Alarm'
+  }"
+>
+  <i class="material-icons state-icon">{{ iconMap[machine.state] }}</i
+  ><i *ngIf="showIcon" class="material-icons my-icon">{{ machine.icon }}</i>
+  <p>{{ machine.name }}</p>
+</div>
