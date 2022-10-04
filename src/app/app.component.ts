@@ -1,4 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { map, Observable, timer } from 'rxjs';
 import { MachinesStateService } from './machines-state.service';
 
 @Component({
@@ -9,6 +10,6 @@ import { MachinesStateService } from './machines-state.service';
 })
 export class AppComponent {
   machines$ = this.machinesStateService.getMachines();
-  date = new Date();
+  updatedDate: Observable<Date> = timer(0, 1000).pipe(map(() => new Date()));
   constructor(private machinesStateService: MachinesStateService) {}
 }
